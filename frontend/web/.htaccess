@@ -1,0 +1,20 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /home/edpxfhpc/region-servis.seotm.ua/frontend/web/.htpasswd
+Require valid-user
+
+AddType text/css .css
+RewriteEngine on
+
+# если это папка или файл, открываем его
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+#/home/edpxfhpc/region-servis.seotm.ua
+ #
+ #
+ #
+# в противном случае перенаправляем на index.php
+RewriteRule . index.php
+

@@ -1,0 +1,1 @@
+<div><a href="<?=$model->getAlias($model)?>"><? echo $model->header; ?></a></div>
