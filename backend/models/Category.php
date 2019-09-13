@@ -12,7 +12,7 @@ class Category extends \yii\db\ActiveRecord
 {
     public $statusActive = 1;
     public $statusInActive = 0;
-
+    public $backendPath = '/backend/web';
     public static function tableName()
     {
         return 'category';
@@ -30,6 +30,13 @@ class Category extends \yii\db\ActiveRecord
                 'class' => RoutableBehavior::className(),
                 'defaultRoute' => 'category/view'
             ],
+            'mediafile' => [
+                'class' => MediafileBehavior::className(),
+                'name' => 'category',
+                'attributes' => [
+                    'image',
+                ],
+            ]
         ];
     }
 
@@ -37,7 +44,7 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             [['alias'], 'required', 'message' => Yii::t('admin', 'Пожалуйста, заполните поле: {attribute}')],
-            [['pos', 'status', 'created_at', 'updated_at', 'index', 'parent_id'], 'integer', 'message' => Yii::t('admin', 'Значение должно быть целым числом')],
+            [['pos', 'status', 'on_main', 'created_at', 'updated_at', 'index', 'parent_id'], 'integer', 'message' => Yii::t('admin', 'Значение должно быть целым числом')],
             [['alias', 'image'], 'string', 'max' => 255, 'message' => Yii::t('admin', 'Максимальное количество символов 255')],
             [['alias'], 'unique', 'message' => Yii::t('admin', 'Такой адрес уже существует'), 'on' => 'create'],
             ['banner_id', 'integer']
@@ -92,6 +99,9 @@ class Category extends \yii\db\ActiveRecord
                 return '/' .$this->alias;
             }
         }
+        else{
+            return '/' .$this->alias;
+        }
     }
 
     public function getTranslations()
@@ -103,6 +113,9 @@ class Category extends \yii\db\ActiveRecord
     {
         return static::find()->where(['status' => (new self)->statusActive])->all();
     }
-
+    public function getImagePlaceholder()
+    {
+        return $this->backendPath . '/image/placeholder.jpg';
+    }
 
 }

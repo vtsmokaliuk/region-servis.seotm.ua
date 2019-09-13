@@ -119,7 +119,7 @@
                 <!-- ============================================== BEST SELLER : END ============================================== -->
 
                 <!-- ============================================== BLOG SLIDER ============================================== -->
-                <? if (isset($blogItems)): ?>
+                <? if (isset($blogItemsSS)): ?>
                     <? if (count($blogItems)): ?>
                         <section class="section latest-blog outer-bottom-vs">
                             <h3 class="section-title"><?= Yii::t('frontend', 'Блог') ?></h3>
@@ -127,6 +127,26 @@
                                 <div class="owl-carousel blog-slider custom-carousel">
                                     <? foreach ($blogItems as $item): ?>
                                         <? echo $this->render('/material/_latest-item', ['item' => $item]); ?>
+                                        <!-- /.item -->
+                                    <? endforeach; ?>
+                                    <!-- /.item -->
+
+                                </div>
+                                <!-- /.owl-carousel -->
+                            </div>
+                            <!-- /.blog-slider-container -->
+                        </section>
+                    <? endif; ?>
+                <? endif; ?>
+
+                <? if (isset($mainCategory)): ?>
+                    <? if (count($mainCategory)): ?>
+                        <section class="section latest-blog outer-bottom-vs">
+                            <h3 class="section-title"><?= Yii::t('frontend', 'Каталог') ?></h3>
+                            <div class="blog-slider-container outer-top-xs">
+                                <div class="main_category_list">
+                                    <? foreach ($mainCategory as $item): ?>
+                                        <? echo $this->render('/category/catalog-item', ['item' => $item]); ?>
                                         <!-- /.item -->
                                     <? endforeach; ?>
                                     <!-- /.item -->

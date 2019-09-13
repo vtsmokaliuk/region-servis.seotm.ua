@@ -36,29 +36,12 @@ AppAsset::register($this);
                        'TagClassForName' => 'list-unstyled',
                         'menuTagClass' => 'list-unstyled',
 
-                    ]); ?>
+                    ]);
+
+                     ?>
                 </div>
                 <!-- /.cnt-account -->
 
-                <div class="cnt-block">
-                    <ul class="list-unstyled list-inline">
-                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">USD </span><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">USD</a></li>
-                                <li><a href="#">INR</a></li>
-                                <li><a href="#">GBP</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">English </span><b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">French</a></li>
-                                <li><a href="#">German</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!-- /.list-unstyled -->
-                </div>
                 <!-- /.cnt-cart -->
                 <div class="clearfix"></div>
             </div>
@@ -73,12 +56,16 @@ AppAsset::register($this);
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo"> <a href="<?php echo Url::to(['/']);?>"> <img src="<?php echo Yii::$app->request->baseUrl;?>/images/logo.png" alt="logo"> </a> </div>
+                    <div class="logo"> <a href="<?php echo Url::to(['/']);?>"> <img src="<?php echo Yii::$app->request->baseUrl;?>/images/logo.png" alt="logo" style="width:220px"> </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= --> </div>
                 <!-- /.logo-holder -->
 
-                <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12 top-search-holder">
+                <div class="col-md-3">
+                    <?php echo BlockWidget::show('header-phone-bllock');?>
+                </div>
+
+                <div class="col-lg-4 col-md-3 col-sm-8 col-xs-12 top-search-holder">
                     <!-- /.contact-row -->
                     <!-- ============================================================= SEARCH AREA ============================================================= -->
                     <div class="search-area">
@@ -345,6 +332,8 @@ AppAsset::register($this);
 
 <!-- ============================================== INFO BOXES ============================================== -->
 <?php echo BlockWidget::show('footer-our-features');?>
+
+<?php echo $this->render('/banner/_footer-banner.php')?>
 <!-- /.info-boxes -->
 <!-- ============================================== INFO BOXES : END ============================================== -->
 
@@ -353,9 +342,12 @@ AppAsset::register($this);
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <?php echo BlockWidget::show('footer-contact-block-left');?>
                 <div class="module-body">
                 <div class="col-xs-12 col-sm-6 col-md-3">
+                    <?php echo BlockWidget::show('footer_logo');?>
+                </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
                     <?= MenuWidget::show(['footer-menu-1'], [
                                 'showName' => true,
                                 'NameTag' => 'h4',
@@ -400,13 +392,15 @@ AppAsset::register($this);
                         ]); ?>
                     </div>
                 </div>
+                <?php echo BlockWidget::show('footer-contact-block-left');?>
+
             </div>
         </div>
     </div>
     <div class="copyright-bar">
         <div class="container">
             <?php echo BlockWidget::show('footer-social-block');?>
-            <div class="col-xs-12 col-sm-4 no-padding copyright"><?php echo Yii::$app->config->get('copiright') ?></div>
+            <div class="col-xs-12 col-sm-12 no-padding copyright"><?php echo Yii::$app->config->get('copiright') ?></div>
             <?php echo BlockWidget::show('footer-pay-block');?>
         </div>
     </div>

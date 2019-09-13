@@ -2243,3 +2243,531 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1567071907.73562908172607421875,
     'REQUEST_TIME' => 1567071907,
 ]
+[03-Sep-2019 11:35:42 Europe/Helsinki] PHP Notice:  Trying to get property 'last_visit' of non-object in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 84
+[03-Sep-2019 11:35:42 Europe/Helsinki] PHP Warning:  Creating default object from empty value in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 114
+[03-Sep-2019 11:35:42 Europe/Helsinki] An Error occurred while handling another error:
+Error: Call to undefined method stdClass::save() in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(126): common\models\UserSettings->updateLastVisit()
+#1 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(136): common\models\UserSettings->theUserActivity()
+#2 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(104): common\models\UserSettings::updateUserActivity()
+#3 /home/edpxfhpc/region-servis.seotm.ua/backend/views/layouts/main.php(120): common\models\UserSettings::getUserName()
+#4 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(348): require('/home/edpxfhpc/...')
+#5 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/edpxfhpc/...', Array)
+#6 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/edpxfhpc/...', Array, Object(backend\controllers\SiteController))
+#7 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#8 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#9 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#10 [internal function]: yii\web\ErrorAction->run()
+#11 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#12 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#13 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#14 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#15 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#16 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#17 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/icons/themify-icons/fonts/themify.woff". in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/icons/them...', Array)
+#1 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-backend=692c9b8767ee02b0a7c645e81947918a; _csrf-backend=a5ddf8ee6bc92ae565b68e9d352166049a7a6571e2549f09c7b8fc7d535ad516a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zG16JSWoOi2dzu9I8Q_abemvPx1CmLCf%22%3B%7D',
+    'HTTP_HOST' => 'region-servis.seotm.ua',
+    'HTTP_REFERER' => 'http://region-servis.seotm.ua/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+    'HTTP_X_FORWARDED_FOR' => '213.108.46.228',
+    'HTTP_X_FORWARDED_PROTO' => 'http',
+    'HTTP_ORIGIN' => 'http://region-servis.seotm.ua',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XW4l3gSs3REXaClviTsa6QAAAAI',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XW4l3gSs3REXaClviTsa6QAAAAI',
+    'REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XW4l3gSs3REXaClviTsa6QAAAAI',
+    'SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'region-servis.seotm.ua',
+    'SERVER_ADDR' => '185.67.3.148',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.108.46.228',
+    'DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'SERVER_ADMIN' => 'webmaster@region-servis.seotm.ua',
+    'SCRIPT_FILENAME' => '/home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php',
+    'REMOTE_PORT' => '52240',
+    'REDIRECT_URL' => '/backend/web/site/icons/themify-icons/fonts/themify.woff',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1567499742.0437300205230712890625,
+    'REQUEST_TIME' => 1567499742,
+]
+[03-Sep-2019 11:35:42 Europe/Helsinki] PHP Notice:  Trying to get property 'last_visit' of non-object in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 84
+[03-Sep-2019 11:35:42 Europe/Helsinki] PHP Warning:  Creating default object from empty value in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 114
+[03-Sep-2019 11:35:42 Europe/Helsinki] An Error occurred while handling another error:
+Error: Call to undefined method stdClass::save() in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(126): common\models\UserSettings->updateLastVisit()
+#1 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(136): common\models\UserSettings->theUserActivity()
+#2 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(104): common\models\UserSettings::updateUserActivity()
+#3 /home/edpxfhpc/region-servis.seotm.ua/backend/views/layouts/main.php(120): common\models\UserSettings::getUserName()
+#4 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(348): require('/home/edpxfhpc/...')
+#5 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/edpxfhpc/...', Array)
+#6 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/edpxfhpc/...', Array, Object(backend\controllers\SiteController))
+#7 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#8 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#9 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#10 [internal function]: yii\web\ErrorAction->run()
+#11 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#12 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#13 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#14 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#15 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#16 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#17 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/icons/themify-icons/fonts/themify.ttf". in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/icons/them...', Array)
+#1 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-backend=692c9b8767ee02b0a7c645e81947918a; _csrf-backend=a5ddf8ee6bc92ae565b68e9d352166049a7a6571e2549f09c7b8fc7d535ad516a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22zG16JSWoOi2dzu9I8Q_abemvPx1CmLCf%22%3B%7D',
+    'HTTP_HOST' => 'region-servis.seotm.ua',
+    'HTTP_REFERER' => 'http://region-servis.seotm.ua/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+    'HTTP_X_FORWARDED_FOR' => '213.108.46.228',
+    'HTTP_X_FORWARDED_PROTO' => 'http',
+    'HTTP_ORIGIN' => 'http://region-servis.seotm.ua',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XW4l3r8gplhPqA72Um6g5gAAAA0',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XW4l3r8gplhPqA72Um6g5gAAAA0',
+    'REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XW4l3r8gplhPqA72Um6g5gAAAA0',
+    'SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'region-servis.seotm.ua',
+    'SERVER_ADDR' => '185.67.3.148',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.108.46.228',
+    'DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'SERVER_ADMIN' => 'webmaster@region-servis.seotm.ua',
+    'SCRIPT_FILENAME' => '/home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php',
+    'REMOTE_PORT' => '52248',
+    'REDIRECT_URL' => '/backend/web/site/icons/themify-icons/fonts/themify.ttf',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1567499742.17352008819580078125,
+    'REQUEST_TIME' => 1567499742,
+]
+[03-Sep-2019 11:36:08 Europe/Helsinki] PHP Notice:  Trying to get property 'last_visit' of non-object in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 84
+[03-Sep-2019 11:36:08 Europe/Helsinki] PHP Warning:  Creating default object from empty value in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 114
+[03-Sep-2019 11:36:08 Europe/Helsinki] An Error occurred while handling another error:
+Error: Call to undefined method stdClass::save() in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(126): common\models\UserSettings->updateLastVisit()
+#1 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(136): common\models\UserSettings->theUserActivity()
+#2 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(104): common\models\UserSettings::updateUserActivity()
+#3 /home/edpxfhpc/region-servis.seotm.ua/backend/views/layouts/main.php(120): common\models\UserSettings::getUserName()
+#4 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(348): require('/home/edpxfhpc/...')
+#5 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/edpxfhpc/...', Array)
+#6 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/edpxfhpc/...', Array, Object(backend\controllers\SiteController))
+#7 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#8 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#9 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#10 [internal function]: yii\web\ErrorAction->run()
+#11 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#12 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#13 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#14 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#15 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#16 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#17 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/icons/themify-icons/fonts/themify.woff". in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/icons/them...', Array)
+#1 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-backend=bbec5e4abaf0433eb71349dc28f8b58a; _csrf-backend=7c33252b45338e63e1085c0f7b48bac4b2b4d9f489b91bf22e2a0f2d517c4ffaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22bfT433NWdMphHjsjqqUGZ5xnn591hpAx%22%3B%7D',
+    'HTTP_HOST' => 'region-servis.seotm.ua',
+    'HTTP_REFERER' => 'http://region-servis.seotm.ua/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+    'HTTP_X_FORWARDED_FOR' => '213.108.46.228',
+    'HTTP_X_FORWARDED_PROTO' => 'http',
+    'HTTP_ORIGIN' => 'http://region-servis.seotm.ua',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XW4l@JI61B4ZmZ1ezd7R6gAAAAc',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XW4l@JI61B4ZmZ1ezd7R6gAAAAc',
+    'REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XW4l@JI61B4ZmZ1ezd7R6gAAAAc',
+    'SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'region-servis.seotm.ua',
+    'SERVER_ADDR' => '185.67.3.148',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.108.46.228',
+    'DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'SERVER_ADMIN' => 'webmaster@region-servis.seotm.ua',
+    'SCRIPT_FILENAME' => '/home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php',
+    'REMOTE_PORT' => '53380',
+    'REDIRECT_URL' => '/backend/web/site/icons/themify-icons/fonts/themify.woff',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1567499768.3159639835357666015625,
+    'REQUEST_TIME' => 1567499768,
+]
+[03-Sep-2019 11:36:08 Europe/Helsinki] PHP Notice:  Trying to get property 'last_visit' of non-object in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 84
+[03-Sep-2019 11:36:08 Europe/Helsinki] PHP Warning:  Creating default object from empty value in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 114
+[03-Sep-2019 11:36:08 Europe/Helsinki] An Error occurred while handling another error:
+Error: Call to undefined method stdClass::save() in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(126): common\models\UserSettings->updateLastVisit()
+#1 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(136): common\models\UserSettings->theUserActivity()
+#2 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(104): common\models\UserSettings::updateUserActivity()
+#3 /home/edpxfhpc/region-servis.seotm.ua/backend/views/layouts/main.php(120): common\models\UserSettings::getUserName()
+#4 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(348): require('/home/edpxfhpc/...')
+#5 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/edpxfhpc/...', Array)
+#6 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/edpxfhpc/...', Array, Object(backend\controllers\SiteController))
+#7 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#8 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#9 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#10 [internal function]: yii\web\ErrorAction->run()
+#11 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#12 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#13 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#14 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#15 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#16 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#17 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/icons/themify-icons/fonts/themify.ttf". in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/icons/them...', Array)
+#1 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-backend=bbec5e4abaf0433eb71349dc28f8b58a; _csrf-backend=7c33252b45338e63e1085c0f7b48bac4b2b4d9f489b91bf22e2a0f2d517c4ffaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22bfT433NWdMphHjsjqqUGZ5xnn591hpAx%22%3B%7D',
+    'HTTP_HOST' => 'region-servis.seotm.ua',
+    'HTTP_REFERER' => 'http://region-servis.seotm.ua/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+    'HTTP_X_FORWARDED_FOR' => '213.108.46.228',
+    'HTTP_X_FORWARDED_PROTO' => 'http',
+    'HTTP_ORIGIN' => 'http://region-servis.seotm.ua',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XW4l@MX4mYXyWWpf8q@aIwAAAAQ',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XW4l@MX4mYXyWWpf8q@aIwAAAAQ',
+    'REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XW4l@MX4mYXyWWpf8q@aIwAAAAQ',
+    'SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'region-servis.seotm.ua',
+    'SERVER_ADDR' => '185.67.3.148',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.108.46.228',
+    'DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'SERVER_ADMIN' => 'webmaster@region-servis.seotm.ua',
+    'SCRIPT_FILENAME' => '/home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php',
+    'REMOTE_PORT' => '53390',
+    'REDIRECT_URL' => '/backend/web/site/icons/themify-icons/fonts/themify.ttf',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1567499768.5604550838470458984375,
+    'REQUEST_TIME' => 1567499768,
+]
+[03-Sep-2019 11:36:29 Europe/Helsinki] PHP Notice:  Trying to get property 'last_visit' of non-object in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 84
+[03-Sep-2019 11:36:29 Europe/Helsinki] PHP Warning:  Creating default object from empty value in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 114
+[03-Sep-2019 11:36:29 Europe/Helsinki] An Error occurred while handling another error:
+Error: Call to undefined method stdClass::save() in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(126): common\models\UserSettings->updateLastVisit()
+#1 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(136): common\models\UserSettings->theUserActivity()
+#2 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(104): common\models\UserSettings::updateUserActivity()
+#3 /home/edpxfhpc/region-servis.seotm.ua/backend/views/layouts/main.php(120): common\models\UserSettings::getUserName()
+#4 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(348): require('/home/edpxfhpc/...')
+#5 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/edpxfhpc/...', Array)
+#6 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/edpxfhpc/...', Array, Object(backend\controllers\SiteController))
+#7 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#8 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#9 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#10 [internal function]: yii\web\ErrorAction->run()
+#11 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#12 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#13 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#14 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#15 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#16 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#17 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/icons/themify-icons/fonts/themify.woff". in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/icons/them...', Array)
+#1 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-backend=bbec5e4abaf0433eb71349dc28f8b58a; _csrf-backend=7c33252b45338e63e1085c0f7b48bac4b2b4d9f489b91bf22e2a0f2d517c4ffaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22bfT433NWdMphHjsjqqUGZ5xnn591hpAx%22%3B%7D',
+    'HTTP_HOST' => 'region-servis.seotm.ua',
+    'HTTP_REFERER' => 'http://region-servis.seotm.ua/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+    'HTTP_X_FORWARDED_FOR' => '213.108.46.228',
+    'HTTP_X_FORWARDED_PROTO' => 'http',
+    'HTTP_ORIGIN' => 'http://region-servis.seotm.ua',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XW4mDOHwPlR650xeW9xP@gAAAAg',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XW4mDOHwPlR650xeW9xP@gAAAAg',
+    'REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XW4mDOHwPlR650xeW9xP@gAAAAg',
+    'SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'region-servis.seotm.ua',
+    'SERVER_ADDR' => '185.67.3.148',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.108.46.228',
+    'DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'SERVER_ADMIN' => 'webmaster@region-servis.seotm.ua',
+    'SCRIPT_FILENAME' => '/home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php',
+    'REMOTE_PORT' => '54066',
+    'REDIRECT_URL' => '/backend/web/site/icons/themify-icons/fonts/themify.woff',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/admin/site/icons/themify-icons/fonts/themify.woff',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1567499788.9689610004425048828125,
+    'REQUEST_TIME' => 1567499788,
+]
+[03-Sep-2019 11:36:29 Europe/Helsinki] PHP Notice:  Trying to get property 'last_visit' of non-object in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 84
+[03-Sep-2019 11:36:29 Europe/Helsinki] PHP Warning:  Creating default object from empty value in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php on line 114
+[03-Sep-2019 11:36:29 Europe/Helsinki] An Error occurred while handling another error:
+Error: Call to undefined method stdClass::save() in /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(126): common\models\UserSettings->updateLastVisit()
+#1 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(136): common\models\UserSettings->theUserActivity()
+#2 /home/edpxfhpc/region-servis.seotm.ua/common/models/UserSettings.php(104): common\models\UserSettings::updateUserActivity()
+#3 /home/edpxfhpc/region-servis.seotm.ua/backend/views/layouts/main.php(120): common\models\UserSettings::getUserName()
+#4 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(348): require('/home/edpxfhpc/...')
+#5 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/edpxfhpc/...', Array)
+#6 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/edpxfhpc/...', Array, Object(backend\controllers\SiteController))
+#7 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#8 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#9 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#10 [internal function]: yii\web\ErrorAction->run()
+#11 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#12 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#13 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#14 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#15 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#16 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#17 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "site/icons/themify-icons/fonts/themify.ttf". in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/icons/them...', Array)
+#1 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/edpxfhpc/region-servis.seotm.ua/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php(17): yii\base\Application->run()
+#2 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+    'HTTP_CONNECTION' => 'close',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => 'advanced-backend=bbec5e4abaf0433eb71349dc28f8b58a; _csrf-backend=7c33252b45338e63e1085c0f7b48bac4b2b4d9f489b91bf22e2a0f2d517c4ffaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22bfT433NWdMphHjsjqqUGZ5xnn591hpAx%22%3B%7D',
+    'HTTP_HOST' => 'region-servis.seotm.ua',
+    'HTTP_REFERER' => 'http://region-servis.seotm.ua/admin/site/login',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36',
+    'HTTP_X_FORWARDED_FOR' => '213.108.46.228',
+    'HTTP_X_FORWARDED_PROTO' => 'http',
+    'HTTP_ORIGIN' => 'http://region-servis.seotm.ua',
+    'REDIRECT_REDIRECT_UNIQUE_ID' => 'XW4mDZI61B4ZmZ1ezd7SAwAAAAc',
+    'REDIRECT_REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'XW4mDZI61B4ZmZ1ezd7SAwAAAAc',
+    'REDIRECT_SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'XW4mDZI61B4ZmZ1ezd7SAwAAAAc',
+    'SCRIPT_URL' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SCRIPT_URI' => 'http://region-servis.seotm.ua/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'region-servis.seotm.ua',
+    'SERVER_ADDR' => '185.67.3.148',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '213.108.46.228',
+    'DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/edpxfhpc/region-servis.seotm.ua',
+    'SERVER_ADMIN' => 'webmaster@region-servis.seotm.ua',
+    'SCRIPT_FILENAME' => '/home/edpxfhpc/region-servis.seotm.ua/backend/web/index.php',
+    'REMOTE_PORT' => '54074',
+    'REDIRECT_URL' => '/backend/web/site/icons/themify-icons/fonts/themify.ttf',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/admin/site/icons/themify-icons/fonts/themify.ttf',
+    'SCRIPT_NAME' => '/backend/web/index.php',
+    'PHP_SELF' => '/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1567499789.071487903594970703125,
+    'REQUEST_TIME' => 1567499789,
+]

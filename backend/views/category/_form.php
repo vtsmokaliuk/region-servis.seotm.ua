@@ -1,5 +1,6 @@
 <?php
 
+use pendalf89\filemanager\models\Mediafile;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
@@ -26,6 +27,19 @@ $banners = [];
 foreach ($bannerList as $banner){
     $banners[$banner->id] = $banner->name;
 }
+
+$script = <<< JS
+   $('#delete_image_preview').click(function(){
+    $('#trumb_image img').attr('src','/backend/web/image/placeholder.jpg');
+    $('#category-image').attr('value','');
+    return false;
+});
+$('#change_image_preview').click(function(){
+    $('#category-image-btn').click();
+    return false;
+});
+JS;
+$this->registerJs($script);
 ?>
 <div class="reverse-mode">
     <?php $form = ActiveForm::begin(); ?>
@@ -62,6 +76,13 @@ foreach ($bannerList as $banner){
                     <h5 class="card-title"><?= Yii::t('admin', 'Параметры отображения') ?></h5>
                     <div class="el-card-item">
                         <?= $form->field($model, 'pos')->textInput() ?>
+                        <div class="custom-control custom-checkbox">
+                            <input type="hidden" name="Category[on_main]" value="0">
+                            <input type="checkbox" class="custom-control-input" id="on_main" name="Category[on_main]"
+                                   value="1" <? if ($model->on_main == 1) echo 'checked'; ?>>
+                            <label class="custom-control-label"
+                                   for="on_main"><?= Yii::t('admin', 'Показывать на главной') ?></label>
+                        </div>
                     </div>
                 </div>
                 <hr>
@@ -85,6 +106,44 @@ foreach ($bannerList as $banner){
                     </div>
                 </div>
                 <hr>
+                    <div class="card p-15">
+                        <h5 class="card-title"><?= Yii::t('admin', 'Изображение') ?></h5>
+                        <div class="card">
+                            <div class="el-card-item">
+                                <div class="el-card-avatar el-overlay-1" id="trumb_image">
+                                    <? if($mediafile = Mediafile::loadOneByOwner('category', $model->id, 'image')):
+                                        echo $mediafile->getThumbImage('medium');
+                                    else:
+                                        echo '<img src="'.$model->getImagePlaceholder().'" class="">';
+                                    endif; ?>
+                                    <div class="el-overlay">
+                                        <ul class="list-style-none el-info">
+                                            <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" href="javascript:void(0);" id="delete_image_preview"><i class="mdi mdi-delete"></i></a></li>
+                                            <li class="el-item"><a class="btn default btn-outline el-link" href="javascript:void(0);" id="change_image_preview"><i class="mdi mdi-grease-pencil"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="el-card-content">
+                                    <?  echo $form->field($model, 'image')->widget(FileInput::className(), [
+                                        'buttonTag' => 'button',
+                                        'buttonName' => Yii::t('admin','Выбрать'),
+                                        'buttonOptions' => ['class' => 'btn btn-default'],
+                                        'options' => ['class' => 'form-control '],
+                                        'template' => '<div class="input-group hidden">{input}<span class="input-group-btn">{button}</span></div>',
+                                        'thumb' => 'original',
+                                        'imageContainer' => '.img',
+                                        'pasteData' => FileInput::DATA_URL,
+                                        'callbackBeforeInsert' => 'function(e, data) {
+                console.log( data );
+                $("#trumb_image img").attr("src",data["url"]);
+                }',
+                                    ])->label(false);
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
             </div>
         </div>
     </div>

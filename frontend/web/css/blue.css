@@ -52,7 +52,7 @@ a {
   color: #0f6cb2;
 }
 .header-style-1 .header-nav {
-  background: #157ed2;
+  background: #2b2b2a;
   border-top: 1px solid hsla(0,0%,100%,.2);
   border-radius: 0px 0px 0px 200px;
 }
@@ -123,7 +123,8 @@ a {
   color: #0f6cb2;
 }
 .product .product-info .product-price .price {
-  color: #333;
+  color: #a8cf45;
+  font-size: 18px;
 }
 .product .cart .action ul li.lnk a:hover,
 .product .cart .action ul li.lnk a:focus {
@@ -186,7 +187,7 @@ a {
 .custom-carousel .owl-controls .owl-next:hover,
 .custom-carousel .owl-controls .owl-prev:focus,
 .custom-carousel .owl-controls .owl-next:focus {
-  background: #0f6cb2;
+  background: #a8cf45;
 }
 .yamm .dropdown-menu .title:hover,
 .yamm .dropdown-menu .title:focus {

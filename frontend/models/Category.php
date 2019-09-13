@@ -11,7 +11,7 @@ class Category extends \yii\db\ActiveRecord
 {
     public $tableProductCategory = 'product_to_category';
     public $statusIsActive = 1;
-
+    public $backendPath = '/backend/web';
     public function behaviors()
     {
         return [
@@ -102,5 +102,26 @@ class Category extends \yii\db\ActiveRecord
         return $breadcrumbs;
     }
 
+    public function getMainCategory()
+    {
+        return self::find()->where(['status' => $this->statusIsActive])->andWhere(['on_main' => 1])->all();
+    }
+
+
+    public function getImagePlaceholder()
+    {
+        return $this->backendPath . '/image/placeholder.jpg';
+    }
+
+    public function getImage($model = null){
+        if(!empty($model)){
+            if(!empty($model->image)){
+                return $model->image;
+            }
+            else{
+                return $this->getImagePlaceholder();
+            }
+        }
+    }
 
 }

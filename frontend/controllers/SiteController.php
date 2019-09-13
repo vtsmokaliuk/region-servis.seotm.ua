@@ -18,6 +18,7 @@ use frontend\models\ContactForm;
 use common\modules\cabinet\models\SignupForm;
 use frontend\models\Material;
 use frontend\models\Banner;
+use frontend\models\Category;
 
 
 class SiteController extends Controller
@@ -75,6 +76,8 @@ class SiteController extends Controller
         $blogItems = null;
         $isnew = null;
         $isrecomended = null;
+        $categoryModel = new Category;
+        $mainCategory = $categoryModel->getMainCategory();
         if (!empty($id)) {
             $material = $this->findModel($id);
             $this->registerMeta($material);
@@ -88,7 +91,7 @@ class SiteController extends Controller
         if (!empty($material->banner_id) and $material->banner_id > 0) {
             $banners = $bannerModel->getBennerById($material->banner_id);
         }
-        return $this->render('index', ['banners' => $banners, 'material' => $material, 'bannerModel' => $bannerModel, 'isnew' => $isnew, 'blogItems' =>  $blogItems, 'isrecomended' => $isrecomended]);
+        return $this->render('index', ['banners' => $banners, 'material' => $material, 'bannerModel' => $bannerModel, 'isnew' => $isnew, 'blogItems' => $blogItems, 'isrecomended' => $isrecomended, 'mainCategory' => $mainCategory]);
     }
 
     public function actionLogin()

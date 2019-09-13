@@ -14,7 +14,7 @@ use frontend\models\Material;
 
 class CategoryController extends Controller
 {
-    public $pageSize = 10;
+    public $pageSize = 20;
 
     public function behaviors()
     {

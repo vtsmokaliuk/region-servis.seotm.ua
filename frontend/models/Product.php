@@ -8,6 +8,7 @@ use pendalf89\filemanager\models\Mediafile;
 use common\models\Route;
 use yii\helpers\Url;
 use frontend\models\Category;
+
 class Product extends \yii\db\ActiveRecord
 {
 
@@ -48,7 +49,9 @@ class Product extends \yii\db\ActiveRecord
     {
         $currency = $this->getCurrency();
         if ($model !== null) {
-            return $model->price . $currency;
+            $price = number_format($model->price, 2, '.', '');
+            $pricePlaceholder = Yii::$app->config->get('price-currency-placeholder');
+            return '<span class="price-currency-placeholder">'.$pricePlaceholder.'</span>'.$price . '<span class="currency-symbol">'.$currency.'</span>';
         }
     }
 
@@ -116,63 +119,73 @@ class Product extends \yii\db\ActiveRecord
         return $products;
     }
 
-    public function getIsNew(){
+    public function getIsNew()
+    {
         $limit = 5;
-        if(Yii::$app->config->get('countItemsInNew')){
+        if (Yii::$app->config->get('countItemsInNew')) {
             $limit = Yii::$app->config->get('countItemsInNew');
         }
         $products = Product::find()->where(['status' => (new self)->statusIsActive])->andwhere(['is_new' => 1])->orderBy('id DESC')->limit($limit)->all();
         return $products;
     }
 
-    public function getIsRecomended(){
+    public function getIsRecomended()
+    {
         $limit = 5;
-        if(Yii::$app->config->get('countItemsIsRecomended')){
+        if (Yii::$app->config->get('countItemsIsRecomended')) {
             $limit = Yii::$app->config->get('countItemsIsRecomended');
         }
         $products = Product::find()->where(['status' => (new self)->statusIsActive])->andwhere(['is_recomended' => 1])->orderBy('id DESC')->limit($limit)->all();
         return $products;
     }
 
-    public function productTags($product = null){
-        if(!empty($product)) {
-            if($product->is_new == 1) {
+    public function productTags($product = null)
+    {
+        if (!empty($product)) {
+            if ($product->is_new == 1) {
                 return Yii::$app->view->render('_is-new-tag');
             }
         }
     }
-    public function getImages(int $product_id = null){
-        if($product_id != null){
-            $sql = "SELECT * FROM ".$this->productImageTable." WHERE product_id = ".$product_id. " ORDER BY id ASC";
+
+    public function getImages(int $product_id = null)
+    {
+        if ($product_id != null) {
+            $sql = "SELECT * FROM " . $this->productImageTable . " WHERE product_id = " . $product_id . " ORDER BY id ASC";
             return Yii::$app->db->createCommand($sql)->queryAll();
         }
         return false;
     }
 
-    public function getSmallImage(string $image = null){
-        if(!empty($image)){
+    public function getSmallImage(string $image = null)
+    {
+        if (!empty($image)) {
             return $image;
         }
     }
 
-    public function getCategory(int $product_id = null){
-        if(!empty($product_id)){
-            $sql = "SELECT * FROM ".$this->productToCategoryTable." WHERE product_id = ".$product_id;
+    public function getCategory(int $product_id = null)
+    {
+        if (!empty($product_id)) {
+            $sql = "SELECT * FROM " . $this->productToCategoryTable . " WHERE product_id = " . $product_id;
             return Yii::$app->db->createCommand($sql)->queryOne();
         }
     }
-    public function getCategoryDescription(int $id = null){
-        if(!empty($id)){
+
+    public function getCategoryDescription(int $id = null)
+    {
+        if (!empty($id)) {
             return Category::find()->where(['id' => $id])->one();
         }
     }
+
     public function getBreadcrumbs($model)
     {
         $breadcrumbs = [];
-        if($this->getCategory($model->id)){
+        if ($this->getCategory($model->id)) {
             $category = $this->getCategory($model->id);
             $categoryDesc = $this->getCategoryDescription($category['category_id']);
-            $breadcrumbs[] = ['url' => $categoryDesc->getAlias($categoryDesc),'label' => $categoryDesc->header];
+            $breadcrumbs[] = ['url' => $categoryDesc->getAlias($categoryDesc), 'label' => $categoryDesc->header];
         }
         $breadcrumbs[] = ['label' => $model->header];
 

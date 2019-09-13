@@ -15,8 +15,14 @@
                     <span class="price"><?php echo $model->getProductPrice($model) ?></span>
                     <span class="price-before-discount" style="display:none">$ 800</span>
                 </div><!-- /.product-price -->
+                <div class="add-cart-button btn-group">
+                    <button class="btn btn-primary icon add-to-cart-small" data-toggle="dropdown"
+                            type="button" href="/cart/add/<?php echo $model->id ?>"><i class="fa fa-shopping-cart"></i></button>
+                    <button class="btn btn-primary cart-btn add-to-cart-small" type="button" href="/cart/add/<?php echo $model->id ?>"><?=Yii::$app->config->get('btnAddToCartInNewWidget')?>
+                    </button>
+                </div>
             </div><!-- /.product-info -->
-            <div class="cart clearfix animate-effect">
+            <div class="cart clearfix animate-effect" style="display: none">
                 <div class="action">
                     <ul class="list-unstyled">
                         <li class="add-cart-button btn-group">
